@@ -1,0 +1,68 @@
+/* autosuggestion  */
+.react-autosuggest__container {
+  display: inline-block;
+  position: relative;
+  @include respond(tab-port) {
+    display: block;
+    margin: 0 auto;
+  }
+}
+.react-autosuggest__input {
+  height: 1.2rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: 0.1rem solid #aaa;
+  border-radius: 0.4rem;
+  width: 16rem;
+}
+
+.react-autosuggest__input--focused {
+  outline: none;
+}
+
+.react-autosuggest__input--open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.react-autosuggest__suggestions-container {
+  display: none;
+}
+
+.react-autosuggest__suggestions-container--open {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  @include respond(tab-port) {
+    width: 50%;
+  }
+  top: 5.1rem;
+  border: 0.1rem solid #aaa;
+  background-color: #fff;
+  font-size: 1.5rem;
+  border-bottom-left-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  z-index: 2;
+}
+
+.react-autosuggest__suggestions-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.react-autosuggest__suggestion {
+  cursor: pointer;
+  padding: 1rem 2rem;
+}
+
+.react-autosuggest__suggestion--highlighted {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary, 0.35),
+    rgba($color-tertiary-light, 0.35)
+  );
+  color: $color-tertiary-dark;
+}
+/* autosuggestion end  */

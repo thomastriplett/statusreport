@@ -1,0 +1,16 @@
+.naming-edit {
+  margin: 0 auto;
+  line-height: 3rem;
+  & input {
+    padding: 0.5rem;
+    min-height: 2.5rem;
+    display: inline-block;
+    width: 95%;
+    outline: none;
+    @include respond(tab-port) {
+      width: 95%;
+      margin: 0 auto;
+    }
+  }
+}
+

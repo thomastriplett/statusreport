@@ -1,0 +1,195 @@
+.btn {
+  font-size: 1.4rem;
+  font-weight: 500;
+  &__report,
+  &__summary,
+  &__taskSelector,
+  &__remove,
+  &__search,
+  &__notFound,
+  &__guide,
+  &__editname,
+  &__submit,
+  &__logout,
+  &__login--back,
+  &__editSelect,
+  {
+    position: relative;
+    outline: 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border: 0.1rem solid $color-primary;
+    border-radius: 1.2rem;
+    transition: all 0.2s;
+    background-color: $color-primary;
+    color: $color-text;
+    &:hover {
+      border: 0.1rem solid $color-secondary;
+    }
+  }
+  &__summary,
+  &__notFound,
+  {
+    &::after {
+      content: "";
+      background-color: $color-primary;
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 1.2rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.4s;
+    }
+  }
+
+  &__search {
+    margin-left: auto;
+    @include respond(tab-port) {
+      display: block;
+    }
+  }
+  &__editname{
+    @include respond(tab-port) {
+      display: block;
+    }
+    @include respond(phone) {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+  &__guide {
+    @include respond(phone) {
+      padding: 1.6rem;
+    }
+    &--inPopup {
+      display: block;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      width: 20%;
+    }
+
+  }
+  &__summary {
+    padding: 1rem 2rem;
+    margin: 0.4rem;
+    margin-top: 2.4rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  &__remove {
+    padding: 0.3rem 0.8rem;
+    margin: 0.4rem;
+    font-weight: 100;
+  }
+
+  &__request {
+    padding: 1.6rem;
+    margin: 0.4rem;
+    margin-top: 2.4rem;
+    margin-left: 10rem;
+    margin-right: 0rem;;
+  }
+
+  &__viewRequest {
+    position: relative;
+    bottom: -5px;
+
+  }
+
+
+  &:hover {
+    background-color: $color-secondary;
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+  &:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+  &__taskSelector,
+  &__login--back {
+    width: 50%;
+    margin: 0 auto;
+    padding: 1.2rem;
+    border-radius: 0;
+    border-bottom-left-radius: 5px 5px;
+    border-bottom-right-radius: 5px 5px;
+
+    &:not(:last-child) {
+      border-right: 0.1rem solid $color-tertiary-dark;
+    }
+
+    &:hover {
+      border: 0.1rem solid $color-secondary;
+      &:not(:last-child) {
+        border-right: 0.1rem solid $color-tertiary-dark;
+      }
+      background-color: $color-secondary;
+      transform: scaleY(1.1);
+
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    }
+  }
+  &__login--back{
+    width: 100%;
+  }
+  &__editSelect{
+    margin: 2rem;
+    height: 16rem;
+    width: 24rem;
+    font-size: 2.4rem;
+    font-weight: 300;
+  }
+  &--marginRight{
+    margin-Right: 1rem;
+  }
+  &--margin{
+    margin: 1rem;
+  }
+  &__clearForm{
+    background-color: lighten($color-gray, 3);
+    border: 0.1rem solid darken($color-gray, 10);
+    color: $color-black;
+    &:hover {
+     color: $color-white;
+    }
+    &::after {
+      content: "";
+      background-color: $color-gray;
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 1.2rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.4s;
+    }
+  }
+}
+
+//editname popup
+.popupbtn--container{
+  display: flex;
+  justify-content: center;
+}
+
+// TaskSelector menu bar
+// when a button is clicked.
+.selected{
+  border: 0.1rem solid $color-secondary;
+  background-color: lighten($color-secondary, 6);
+  // box-shadow: 0 0.5rem 1rem rgba($color-black, 0.5);
+}

@@ -1,0 +1,58 @@
+.wrapper {
+  display: grid;
+  grid-gap: 0.2rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "App-title App-title App-title App-title"
+    "guide guide guide guide"
+    /* "taskSelector taskSelector taskSelector taskSelector" */
+    "form form form form "
+    "summary summary summary summary"
+    "searchSummary searchSummary searchSummary searchSummary";
+}
+
+.App-title {
+  grid-area: App-title;
+}
+
+.form-list,
+.summary,
+.searchSummary {
+  border-radius: 3px;
+  border-top: 0.5rem solid $color-tertiary-dark;
+  background: $color-tertiary-light;
+  box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+  margin: 1rem;
+}
+
+.form-list {
+  grid-area: form;
+  overflow: hidden;
+  &--search {
+    animation: moveInRight 0.3s;
+  }
+  &--report {
+    animation: moveInLeft 0.3s;
+  }
+}
+.summary {
+  grid-area: summary;
+  text-align: center;
+  padding: 1rem;
+  &--search {
+    animation: moveInRight 0.5s;
+  }
+  &--report {
+    animation: moveInLeft 0.5s;
+  }
+}
+
+.searchSummary {
+  grid-area: searchSummary;
+  text-align: center;
+  padding: 1rem;
+  &--report {
+    animation: moveInRight 0.5s;
+  }
+}

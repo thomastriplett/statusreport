@@ -1,0 +1,31 @@
+.guide {
+  grid-area: guide;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1.3rem;
+
+  &__popup {
+    display: flex;
+    @include respond(phone) {
+      width: 100%;
+      margin-bottom: 1rem;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+.btn__search {
+  @include respond(phone) {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.guide {
+  grid-area: guide;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1.3rem;
+}
+
+

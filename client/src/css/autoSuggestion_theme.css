@@ -1,0 +1,10 @@
+/* autosuggestion */
+.container {
+  display: inline-block;
+  position: relative;
+  border: 1px solid red; }
+
+.suggestionsList {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }

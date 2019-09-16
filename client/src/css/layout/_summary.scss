@@ -1,0 +1,34 @@
+.summary-appear {
+  animation: moveInRight 0.3s;
+}
+.summary {
+  &__list {
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+.searchSummary{
+  &__courseNumber{
+    &--heading{
+      padding: 0.3rem 1.5rem;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+      border-radius: 0.3rem;
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary, 0.35),
+        rgba($color-tertiary-light, 0.35)
+      );
+
+    }
+  }
+  &__courseCat{
+    display: inline-block;
+
+    margin: 0 auto;
+    padding: 0 0.6rem;
+
+  }
+}

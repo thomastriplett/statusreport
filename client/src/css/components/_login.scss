@@ -1,0 +1,62 @@
+.login{
+  &__container{
+    animation: fadein 0.4s;
+    border-radius: 3px;
+    border-top: 0.5rem solid $color-tertiary-dark;
+    background: $color-tertiary-light;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    margin: 0 auto;
+    margin-top: 3.2rem;
+    grid-area: form;
+    overflow: hidden;
+    // height: auto;
+  }
+
+  &__form{
+    display: block;
+    padding: 2rem;
+
+
+    &--title{
+      margin-top: 1.2rem;
+      margin-bottom: 2rem;
+      font-size: 3.2rem;
+      font-weight: 300;
+      color: $color-tertiary-dark;
+    }
+    &--username,
+    &--password{
+      display: block !important;
+      outline: 0;
+      width: 32rem;
+      padding: 1.6rem 2.3rem;
+      margin: 0 auto 2rem auto;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 300;
+    }
+    &--submit{
+      display: block;
+      appearance: none;
+      outline: 0;
+      margin: 0 auto 10px auto;
+      width: 25rem;
+      cursor: pointer;
+      transition-duration: 0.25s;
+        &::after {
+          content: "";
+          background-color: $color-primary;
+          display: inline-block;
+          height: 100%;
+          width: 100%;
+          border-radius: 1.2rem;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: all 0.4s;
+        }
+    }
+  }
+
+}

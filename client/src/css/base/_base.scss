@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%; //1 rem 10px
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 56.25%
+  }
+  @include respond(tab-port) {
+    // width < 1000?
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12, 12/16
+  }
+  //background: $color-gray;
+  background: linear-gradient(
+      rgba($color-tertiary-dark, 0.1),
+      rgba($color-tertiary-dark, 0.3)
+    ),
+    url(../img/bg.png);
+}
+body {
+  min-height: 100vh;
+}
+.main-wrapper {
+  max-width: 110rem;
+  margin: auto;
+  padding-bottom: 3rem;
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}

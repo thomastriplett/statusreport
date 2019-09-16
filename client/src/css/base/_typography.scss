@@ -1,0 +1,123 @@
+body {
+  font-size: 1.6rem;
+  font-family: "Lato", sans-serif;
+}
+li {
+  padding-top: 0.8rem;
+}
+
+.App-title {
+  padding: 2.4rem;
+  text-align: center;
+  letter-spacing: 1.2rem;
+  font-size: 5.6rem;
+  font-weight: 300;
+  color: $color-tertiary-dark;
+  animation: moveInTop 0.4s;
+}
+
+.heading-primary {
+  margin-top: 1.6rem;
+  // color: $color-primary;
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: $color-tertiary-dark;
+}
+.heading-secondary {
+  margin-top: 1rem;
+  // color: $color-primary;
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: $color-tertiary-dark;
+}
+
+/* input box */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="password"],
+select {
+  display: inline-block;
+  border: 0.1rem solid $color-tertiary-dark;
+  border-radius: 0.4rem;
+}
+
+/* summary */
+.tasks-list {
+  padding-left: 3rem;
+  text-align: left;
+  list-style-position: inside;
+  padding-bottom: 4.2rem;
+  &-gap {
+    padding: 0.6rem;
+  }
+}
+
+.summary-info {
+  line-height: 2.8rem;
+}
+.no-suggestion {
+  display: flex;
+  justify-content: center;
+  line-height: 1.6rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: $color-primary;
+  @include respond(tab-port) {
+    padding: 0.8rem;
+  }
+  &--form{
+    display: flex;
+    justify-content: center;
+    line-height: 1.6rem;
+    margin-left: 4rem;
+    padding-bottom: 1.8rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $color-primary;
+    @include respond(tab-port) {
+      padding: 0.8rem;
+      margin-left: 0rem;
+    }
+  }
+}
+
+.text-totalHours {
+  display: inline-block;
+  color: $color-primary;
+  &-enter {
+    animation: moveInTop 0.4s;
+  }
+  &-exit {
+    display: none;
+  }
+}
+
+// table
+.table {
+  &__p {
+    text-align: left;
+    padding: 0.3rem 1.5rem;
+    margin: 0 auto;
+    font-size: 2rem;
+    font-weight: 300;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    border-radius: 0.3rem;
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary, 0.3),
+      rgba($color-tertiary-light, 0.3)
+    );
+  }
+}
+
+.adminBadge{
+  color: $color-primary;
+  font-weight: 600;
+}
+
+.warning{
+  color: $color-primary;
+  font-weight: 600;
+}
