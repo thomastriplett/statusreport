@@ -33,7 +33,7 @@
     "chart.js": "^2.7.2",
     "concurrently": "^3.5.1",
     "express": "^4.16.2",
-    "express-jwt": "^5.3.1",
+    "express-jwt": "^6.0.0",
     "forever": "^0.15.3",
     "gulp": "^3.9.1",
     "gulp-markdown-it": "^0.1.1",
