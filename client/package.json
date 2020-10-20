@@ -25,7 +25,7 @@
     "react-table": "^6.8.6",
     "react-transition-group": "^2.3.1",
     "reactjs-popup": "^1.1.1",
-    "serve": "^9.2.0"
+    "serve": "^10.1.2"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/css -o src/css",
